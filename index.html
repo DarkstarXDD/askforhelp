@@ -9,14 +9,18 @@
   </head>
   <body>
     <main class="main">
-      <form action="./" method="GET" class="form">
-        <div class="form-groups">
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" class="input" />
-        </div>
-        <div class="form-groups">
+      <form novalidate action="./" method="GET" class="form">
+        <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" class="input" />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="input"
+            required
+            aria-describedby="error"
+          />
+          <div id="error" class="error" aria-live="polite" role="alert"></div>
         </div>
         <button class="button">Submit</button>
       </form>
